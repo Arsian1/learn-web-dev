@@ -1,26 +1,213 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Выбор даты и времени</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!--
-      ЗАДАНИЕ
-      ========
-      Сверстать страницу выбора даты и времени по своему макету.
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Выбор даты и времени</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-      Пока это только вёрстка. Никакого JavaScript — ни кликов,
-      ни переходов, ни выбора дня. Всё статично.
+  <div class="page">
+    <!-- Шапка сайта -->
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-block">
+          <span class="logo-icon">&#x2694;</span>
+          <span class="logo-title">КОНТУР</span>
+          <span class="logo-subtitle">БАРБЕРШОП</span>
+        </div>
+        <nav class="nav">
+          <a href="#" class="nav-link">Услуги</a>
+          <a href="#" class="nav-link">Галерея</a>
+          <a href="#" class="nav-link">Команда</a>
+          <a href="#" class="nav-link">Отзывы</a>
+          <a href="#" class="nav-link">Контакты</a>
+        </nav>
+        <div class="header-phone">+7 (495) 123-45-67</div>
+      </div>
+    </header>
 
-      Стили пишите в styles.css. Разметку — здесь.
-    -->
+    <!-- Верхний блок с шагами -->
+    <div class="steps-bar">
+      <div class="steps-container">
+        <div class="step completed">
+          <span class="step-icon">&check;</span>
+          <span class="step-text">Мастер</span>
+        </div>
+        <div class="step-line"></div>
+        
+        <div class="step completed">
+          <span class="step-icon">&check;</span>
+          <span class="step-text">Услуги</span>
+        </div>
+        <div class="step-line"></div>
 
-    <div class="page">
-      <!-- Начните отсюда. Разметьте шапку, основную область
-           с календарём и слотами, подвал. -->
+        <div class="step active">
+          <span class="step-number">3</span>
+          <span class="step-text">Дата и время</span>
+        </div>
+        <div class="step-line"></div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <span class="step-text">Ваши данные</span>
+        </div>
+        <div class="step-line"></div>
+
+        <div class="step">
+          <span class="step-number">5</span>
+          <span class="step-text">Подтверждение</span>
+        </div>
+      </div>
     </div>
-  </body>
+
+    <!-- Основная секция записи -->
+    <main class="main-wrapper">
+      <div class="content-container">
+        <!-- Заголовок шага -->
+        <div class="step-header">
+          <div class="step-subtitle">ОНЛАЙН-ЗАПИСЬ · ШАГ 3 ИЗ 4</div>
+          <h1 class="step-title">Когда вам удобно?</h1>
+          <p class="step-description">Показываем свободное время Дмитрия для выбранных услуг на 1 ч 15 мин.</p>
+        </div>
+
+        <!-- Основная сетка: Календарь + Слоты -->
+        <div class="booking-grid">
+          <!-- Левая колонка: Календарь -->
+          <section class="card calendar-card">
+            <div class="calendar-header">
+              <h2 class="month-title">Октябрь 2026</h2>
+              <div class="calendar-arrows">
+                <button class="arrow-btn" aria-label="Предыдущий месяц">&lt;</button>
+                <button class="arrow-btn" aria-label="Следующий месяц">&gt;</button>
+              </div>
+            </div>
+
+            <div class="weekdays-grid">
+              <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+            </div>
+
+            <div class="days-grid">
+              <span class="day dimmed">28</span>
+              <span class="day dimmed">29</span>
+              <span class="day dimmed">30</span>
+              <span class="day dimmed">1</span>
+              <button class="day available">2</button>
+              <button class="day available">3</button>
+              <button class="day available">4</button>
+
+              <button class="day available">5</button>
+              <button class="day available">6</button>
+              <button class="day available">7</button>
+              <button class="day available">8</button>
+              <button class="day available">9</button>
+              <button class="day selected">10</button>
+              <button class="day available">11</button>
+
+              <button class="day available">12</button>
+              <button class="day available">13</button>
+              <button class="day available">14</button>
+              <button class="day available">15</button>
+              <button class="day available">16</button>
+              <button class="day available">17</button>
+              <button class="day available">18</button>
+
+              <button class="day available">19</button>
+              <button class="day available">20</button>
+              <button class="day available">21</button>
+              <button class="day available">22</button>
+              <button class="day available">23</button>
+              <button class="day available">24</button>
+              <button class="day available">25</button>
+
+              <button class="day available">26</button>
+              <button class="day available">27</button>
+              <button class="day available">28</button>
+              <button class="day available">29</button>
+              <button class="day available">30</button>
+              <button class="day available">31</button>
+              <span class="day dimmed">1</span>
+            </div>
+
+            <div class="calendar-legend">
+              <span class="legend-dot"></span> Доступные даты для записи
+            </div>
+          </section>
+
+          <!-- Правая колонка: Слоты времени -->
+          <section class="card time-card">
+            <h2 class="time-title">Доступное время</h2>
+            <div class="time-date">Суббота, 10 октября</div>
+
+            <div class="time-slots-grid">
+              <button class="slot-btn">10:00</button>
+              
+              <button class="slot-btn disabled" disabled>
+                <span class="slot-time">11:00</span>
+                <span class="slot-status">Занято</span>
+              </button>
+
+              <button class="slot-btn">12:00</button>
+
+              <button class="slot-btn disabled" disabled>
+                <span class="slot-time">13:00</span>
+                <span class="slot-status">Занято</span>
+              </button>
+
+              <button class="slot-btn selected">14:00</button>
+              <button class="slot-btn">15:30</button>
+              <button class="slot-btn">16:00</button>
+              <button class="slot-btn">17:00</button>
+            </div>
+
+            <div class="time-footer-note">
+              Время указано по Москве. Ваша запись закончится в 15:15.
+            </div>
+          </section>
+        </div>
+
+        <!-- Нижняя панель итогов и кнопок -->
+        <div class="summary-card">
+          <div class="summary-info">
+            <div class="summary-title">10 октября, суббота · 14:00 – 15:15</div>
+            <div class="summary-sub">Итого: 2 400 &#8381; · Оплата в барбершопе</div>
+          </div>
+          <div class="summary-actions">
+            <button class="btn btn-secondary">Назад</button>
+            <button class="btn btn-primary">Продолжить</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">КОНТУР</div>
+          <p class="footer-desc">Мужские стрижки. Точное внимание к деталям.</p>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading">КОНТАКТЫ</div>
+          <p>ул. Садовая, 15, Москва</p>
+          <p class="footer-phone">+7 (495) 123-45-67</p>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading">РЕЖИМ РАБОТЫ</div>
+          <p>Пн–Пт: 9:00 – 21:00</p>
+          <p>Сб–Вс: 10:00 – 19:00</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026. Все права защищены.</span>
+        <a href="#" class="privacy-link">Политика конфиденциальности</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
 </html>
