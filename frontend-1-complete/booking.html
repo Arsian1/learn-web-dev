@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Салон услуг — ÉLAIRE</title>
+    <link rel="stylesheet" href="booking.css" />
+  </head>
+  <body>
+    <div class="booking-page">
+      <!-- header -->
+      <header class="booking-header">
+        <div class="logo">
+          <span class="booking-logo-text">ÉLAIRE</span>
+        </div>
+        <nav class="booking-nav-links">
+          <div class="booking-nav-item active"><a href="#">Услуги</a></div>
+          <div class="booking-nav-item"><a href="#">Мастера</a></div>
+          <div class="booking-nav-item"><a href="#">Отзывы</a></div>
+          <div class="booking-nav-item"><a href="#">Контакты</a></div>
+        </nav>
+        <button class="booking-login-button"><span>Войти</span></button>
+      </header>
+
+      <!-- main -->
+      <main class="booking-layout">
+        <!-- header-row -->
+        <div class="booking-header-row">
+          <div class="booking-title-with-back">
+            <button
+              class="booking-back-button"
+              onclick="window.location.href='services.html'"
+            >
+              ←
+            </button>
+            <span class="booking-page-title">Выбор даты и времени</span>
+          </div>
+          <div class="booking-step-indicator">
+            <div class="booking-step done">
+              <div class="booking-circle"><span>✓</span></div>
+              <span class="booking-step-label light">Выбор услуги</span>
+              <div class="booking-step-line"></div>
+            </div>
+            <div class="booking-step">
+              <div class="booking-circle"><span>2</span></div>
+              <span class="booking-step-label">Дата и время</span>
+              <div class="booking-step-line"></div>
+            </div>
+            <div class="booking-step">
+              <div class="booking-circle empty"><span>3</span></div>
+              <span class="booking-step-label light">Подтверждение</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- panels: calendar -->
+        <div class="panels">
+          <!-- calendar-box -->
+          <div class="calendar-box">
+            <div class="calendar-header">
+              <span class="month-year">Октябрь 2026</span>
+              <div class="calendar-nav">
+                <button>‹</button>
+                <button>›</button>
+              </div>
+            </div>
+            <div class="days-grid-container">
+              <div class="days-labels">
+                <span>Пн</span><span>Вт</span><span>Ср</span> <span>Чт</span
+                ><span>Пт</span><span>Сб</span><span>Вс</span>
+              </div>
+              <div class="grid-days">
+                <!-- неделя 1 -->
+                <div class="week-row">
+                  <div class="day-cell other-month">28</div>
+                  <div class="day-cell other-month">29</div>
+                  <div class="day-cell other-month">30</div>
+                  <div class="day-cell">1</div>
+                  <div class="day-cell">2</div>
+                  <div class="day-cell">3</div>
+                  <div class="day-cell">4</div>
+                </div>
+                <!-- неделя 2 -->
+                <div class="week-row">
+                  <div class="day-cell">5</div>
+                  <div class="day-cell">6</div>
+                  <div class="day-cell">7</div>
+                  <div class="day-cell">8</div>
+                  <div class="day-cell">9</div>
+                  <div class="day-cell">10</div>
+                  <div class="day-cell">11</div>
+                </div>
+                <!-- неделя 3 -->
+                <div class="week-row">
+                  <div class="day-cell">12</div>
+                  <div class="day-cell">13</div>
+                  <div class="day-cell">14</div>
+                  <div class="day-cell">15</div>
+                  <div class="day-cell today">16</div>
+                  <div class="day-cell selected">17</div>
+                  <div class="day-cell">18</div>
+                </div>
+                <!-- неделя 4 -->
+                <div class="week-row">
+                  <div class="day-cell">19</div>
+                  <div class="day-cell">20</div>
+                  <div class="day-cell">21</div>
+                  <div class="day-cell">22</div>
+                  <div class="day-cell">23</div>
+                  <div class="day-cell">24</div>
+                  <div class="day-cell">25</div>
+                </div>
+                <!-- неделя 5 -->
+                <div class="week-row">
+                  <div class="day-cell">26</div>
+                  <div class="day-cell">27</div>
+                  <div class="day-cell">28</div>
+                  <div class="day-cell">29</div>
+                  <div class="day-cell">30</div>
+                  <div class="day-cell">31</div>
+                  <div class="day-cell other-month">1</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- time-box -->
+          <div class="time-box">
+            <span class="time-title">Доступное время</span>
+            <div class="time-grid">
+              <button class="time-slot">10:00</button>
+              <button class="time-slot">10:30</button>
+              <button class="time-slot unavailable">11:00</button>
+              <button class="time-slot">11:30</button>
+              <button class="time-slot selected">12:00</button>
+              <button class="time-slot">13:00</button>
+              <button class="time-slot">14:30</button>
+              <button class="time-slot">15:00</button>
+              <button class="time-slot unavailable">16:00</button>
+              <button class="time-slot">17:30</button>
+              <button class="time-slot">18:00</button>
+              <button class="time-slot">19:30</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- bottom-bar -->
+        <div class="bottom-bar">
+          <div class="selected-info">
+            <span class="label">Выбранная дата и время:</span>
+            <span class="value">Пятница, 17 октября 2026 • 12:00</span>
+          </div>
+          <button
+            class="booking-next-btn"
+            onclick="window.location.href='confirmation.html'"
+          >
+            Далее
+          </button>
+        </div>
+      </main>
+
+      <!-- footer -->
+      <footer class="booking-footer">
+        <div class="booking-footer-top">
+          <div class="booking-footer-brand">
+            <span class="brand-name">ÉLAIRE</span>
+            <span class="brand-desc"
+              >Пространство красоты и гармонии в самом сердце города. Дарим
+              моменты заботы о себе и подчеркиваем вашу уникальность.</span
+            >
+          </div>
+          <div class="booking-footer-links-row">
+            <div class="booking-links-col" style="width: 147px">
+              <span class="col-title">Услуги</span>
+              <a href="#">Стрижки &amp; Укладки</a>
+              <a href="#">Маникюр &amp; Педикюр</a>
+              <a href="#">Спа &amp; Массаж</a>
+            </div>
+            <div class="booking-links-col" style="width: 188px">
+              <span class="col-title">Контакты</span>
+              <a href="#">+7 (495) 123-45-67</a>
+              <a href="#">ул. Пречистенка, 12, Москва</a>
+              <a href="#">ежедневно: 10:00 - 22:00</a>
+            </div>
+          </div>
+        </div>
+        <div class="booking-footer-line"></div>
+        <div class="booking-footer-bottom">
+          <span class="copy"
+            >© 2026 ÉLAIRE Beauty &amp; Wellness. Все права защищены.</span
+          >
+          <span class="legal"
+            >Политика конфиденциальности • Публичная оферта</span
+          >
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,470 @@
+/* ===== reset & base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* ===== page ===== */
+.confirmation-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #faf6f0;
+}
+
+/* ===== header ===== */
+.confirmation-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 56px;
+  height: 90px;
+  background: #ffffff;
+  border-bottom: 1px solid #ede8e1;
+}
+
+.confirmation-logo-text {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  cursor: pointer;
+}
+
+.confirmation-nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.confirmation-nav-item {
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid transparent;
+}
+
+.confirmation-nav-item.active {
+  border-bottom-color: #4f5d50;
+}
+
+.confirmation-nav-item a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  text-decoration: none;
+}
+
+.confirmation-login-button {
+  padding: 12px 28px;
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  text-transform: uppercase;
+  border: 1px solid #4f5d50;
+  color: #4f5d50;
+}
+
+/* ===== main layout ===== */
+.confirmation-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 56px 80px;
+  gap: 40px;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===== header-row ===== */
+.confirmation-header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  height: 36px;
+}
+
+.confirmation-title-with-back {
+  display: flex;
+  gap: 12px;
+}
+
+.confirmation-back-button {
+  border: 1.2px solid #d9d1c7;
+  border-radius: 18px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 23px;
+  color: #222222;
+}
+
+.confirmation-page-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+/* ===== step indicator ===== */
+.confirmation-step-indicator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.confirmation-step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.confirmation-circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: #4f5d50;
+}
+
+.confirmation-step.done .confirmation-circle {
+  background: #c1a27e;
+}
+
+.confirmation-circle.empty {
+  background: transparent;
+  border: 1px solid #6b6661;
+}
+
+.confirmation-circle span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.confirmation-circle.empty span {
+  color: #6b6661;
+}
+
+.confirmation-step.done .confirmation-circle span {
+  font-size: 14px;
+}
+
+.confirmation-step-label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.confirmation-step-label.light {
+  font-weight: 400;
+  color: #6b6661;
+}
+
+.confirmation-step-line {
+  width: 40px;
+  height: 0px;
+  border: 1px solid #eadbc8;
+}
+
+/* ===== centered card ===== */
+.centered-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 28px;
+  gap: 32px;
+  width: 520px;
+  background: #ffffff;
+  border: 1px solid #eadbc8;
+  border-radius: 20px;
+  align-self: center;
+}
+
+/* ===== booking info ===== */
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 100%;
+}
+
+.booking-info .section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  width: 100%;
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 100%;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+}
+
+.detail-row .label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+}
+
+.detail-row .value {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.detail-divider {
+  border: none;
+  border-top: 1px solid #ede8e1;
+  width: 100%;
+  margin: 0;
+}
+
+.total-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+}
+
+.total-row .label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #222222;
+}
+
+.total-row .price {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #c1a27e;
+}
+
+/* ===== contact form ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-form .form-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222222;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  color: #6b6661;
+}
+
+.input-group input,
+.input-group textarea {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 100%;
+  border: 1px solid #eadbc8;
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+  background: #ffffff;
+}
+
+.input-group input {
+  height: 44px;
+}
+
+.input-group textarea {
+  padding: 16px;
+  height: 80px;
+  resize: vertical;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #6b6661;
+  opacity: 0.6;
+}
+
+.confirmation-next-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 36px;
+  width: 100%;
+  height: 52px;
+  background: #4f5d50;
+  border-radius: 100px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.confirmation-next-btn:hover {
+  background: #3d4a3e;
+}
+
+/* ===== footer ===== */
+.confirmation-footer {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 56px 48px;
+  border-top: 1px solid #ede8e1;
+  margin-top: auto;
+}
+
+.confirmation-footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.confirmation-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.confirmation-footer-brand .brand-name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+.confirmation-footer-brand .brand-desc {
+  max-width: 360px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+}
+
+.confirmation-footer-links-row {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.confirmation-links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.confirmation-links-col .col-title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #4f5d50;
+}
+
+.confirmation-links-col a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  text-decoration: none;
+}
+
+.confirmation-footer-line {
+  border: 1px solid #ede8e1;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.confirmation-footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+}
+
+.confirmation-footer-bottom .copy {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+}
+
+.confirmation-footer-bottom .legal {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+  margin-left: 20px;
+}

@@ -1,0 +1,285 @@
+/* ==========================================================================
+   ОБЩИЕ СТИЛИ ДЛЯ ПЕРЕИСПОЛЬЗУЕМЫХ КОМПОНЕНТОВ
+
+   Сюда вынесены стили, которые используются на нескольких страницах.
+   Раньше они дублировались в services.css, booking.css, confirmation.css
+   и перебивали друг друга. Теперь — одно место.
+
+   Компоненты, которые используют эти стили:
+   - Header   (шапка сайта)
+   - Footer   (подвал сайта)
+   - StepIndicator (индикатор шагов бронирования)
+   - .page (общий контейнер страницы)
+   - .header-row, .title-with-back, .back-button, .page-title (общая шапка экрана)
+
+   Файл подключается один раз в main.jsx и работает для всех страниц.
+   ========================================================================== */
+
+/* ===== reset & base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* ===== page (общий контейнер) ===== */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #faf6f0;
+}
+
+/* ===== header ===== */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 56px;
+  height: 90px;
+  background: #ffffff;
+  border-bottom: 1px solid #ede8e1;
+}
+
+.logo-text {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.nav-item {
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid transparent;
+}
+
+.nav-item.active {
+  border-bottom-color: #4f5d50;
+}
+
+.nav-item a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  text-decoration: none;
+}
+
+.login-button {
+  padding: 12px 28px;
+  border-radius: 100px;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+/* ===== header-row: заголовок экрана + шаги ===== */
+.header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+  height: 36px;
+}
+
+.title-with-back {
+  display: flex;
+  gap: 12px;
+}
+
+.back-button {
+  border: 1.2px solid #d9d1c7;
+  border-radius: 18px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 23px;
+  color: #222222;
+}
+
+.page-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+/* ===== step indicator ===== */
+.step-indicator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.circle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: #4f5d50;
+}
+
+.step.done .circle {
+  background: #c1a27e;
+}
+
+.circle.empty {
+  background: transparent;
+  border: 1px solid #6b6661;
+}
+
+.circle span {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.circle.empty span {
+  color: #6b6661;
+}
+
+.step.done .circle span {
+  font-size: 14px;
+}
+
+.step-label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.step-label.light {
+  font-weight: 400;
+  color: #6b6661;
+}
+
+.step-line {
+  width: 40px;
+  height: 0px;
+  border: 1px solid #eadbc8;
+}
+
+/* ===== footer ===== */
+.footer {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 56px 48px;
+  border-top: 1px solid #ede8e1;
+  margin-top: auto;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-brand .brand-name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+.footer-brand .brand-desc {
+  max-width: 360px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+}
+
+.footer-links-row {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+
+.links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links-col .col-title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #4f5d50;
+}
+
+.links-col a {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  text-decoration: none;
+}
+
+.footer-line {
+  border: 1px solid #ede8e1;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 0;
+}
+
+.footer-bottom .copy {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+}
+
+.footer-bottom .legal {
+  font-size: 12px;
+  line-height: 16px;
+  color: #6b6661;
+  margin-left: 20px;
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Салон услуг — ÉLAIRE</title>
+    <link rel="stylesheet" href="confirmation.css" />
+    <link rel="stylesheet" href="modal.css" />
+  </head>
+  <body>
+    <div class="confirmation-page">
+      <!-- header -->
+      <header class="confirmation-header">
+        <div class="logo">
+          <span class="confirmation-logo-text">ÉLAIRE</span>
+        </div>
+        <nav class="confirmation-nav-links">
+          <div class="confirmation-nav-item active"><a href="#">Услуги</a></div>
+          <div class="confirmation-nav-item"><a href="#">Мастера</a></div>
+          <div class="confirmation-nav-item"><a href="#">Отзывы</a></div>
+          <div class="confirmation-nav-item"><a href="#">Контакты</a></div>
+        </nav>
+        <button class="confirmation-login-button"><span>Войти</span></button>
+      </header>
+
+      <!-- main -->
+      <main class="confirmation-layout">
+        <!-- header-row -->
+        <div class="confirmation-header-row">
+          <div class="confirmation-title-with-back">
+            <button class="confirmation-back-button">←</button>
+            <span class="confirmation-page-title">Подтверждение записи</span>
+          </div>
+          <div class="confirmation-step-indicator">
+            <div class="confirmation-step done">
+              <div class="confirmation-circle"><span>✓</span></div>
+              <span class="confirmation-step-label light">Выбор услуги</span>
+              <div class="confirmation-step-line"></div>
+            </div>
+            <div class="confirmation-step done">
+              <div class="confirmation-circle"><span>✓</span></div>
+              <span class="confirmation-step-label light">Дата и время</span>
+              <div class="confirmation-step-line"></div>
+            </div>
+            <div class="confirmation-step">
+              <div class="confirmation-circle"><span>3</span></div>
+              <span class="confirmation-step-label">Подтверждение</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- centered-card -->
+        <div class="centered-card">
+          <!-- booking-info -->
+          <div class="booking-info">
+            <span class="section-title">Детали вашего визита</span>
+            <div class="details-grid">
+              <div class="detail-row">
+                <span class="label">Услуга</span>
+                <span class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Дата и время</span>
+                <span class="value"></span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Мастер</span>
+                <span class="value">Алиса Розен</span>
+              </div>
+              <div class="detail-row">
+                <span class="label">Длительность</span>
+                <span class="value"></span>
+              </div>
+              <hr class="detail-divider" />
+              <div class="total-row">
+                <span class="label">К оплате в салоне</span>
+                <span class="price"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- contact-form -->
+          <form class="contact-form">
+            <span class="form-title">Контактные данные</span>
+
+            <div class="input-group">
+              <label for="name">Ваше имя *</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Анна Петрова"
+                value=""
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="phone">Номер телефона *</label>
+              <input
+                type="tel"
+                id="phone"
+                placeholder="+7 (999) 123-45-67"
+                value=""
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="comment">Комментарий к записи</label>
+              <textarea
+                id="comment"
+                placeholder="Например, пожелания по дизайну или аллергии"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="confirmation-next-btn">
+              Подтвердить запись
+            </button>
+          </form>
+        </div>
+      </main>
+
+      <!-- модальное окно подтверждения -->
+      <dialog id="confirmationModal" class="confirmation-modal">
+        <div class="modal-content">
+          <div class="title-block">
+            <div class="check-icon">✓</div>
+            <span class="modal-title">Запись подтверждена</span>
+          </div>
+
+          <div class="details">
+            <div class="row">
+              <span class="label">Услуга</span>
+              <span class="value"></span>
+            </div>
+            <div class="row">
+              <span class="label">Дата и время</span>
+              <span class="value"></span>
+            </div>
+            <div class="row">
+              <span class="label">Мастер</span>
+              <span class="value">Алиса Розен</span>
+            </div>
+            <div class="row">
+              <span class="label">Длительность</span>
+              <span class="value"></span>
+            </div>
+            <div class="modal-divider"></div>
+            <div class="total">
+              <span class="total-label">К оплате</span>
+              <span class="total-price"></span>
+            </div>
+          </div>
+
+          <button class="modal-next-btn">Отлично!</button>
+        </div>
+      </dialog>
+
+      <!-- footer -->
+      <footer class="confirmation-footer">
+        <div class="confirmation-footer-top">
+          <div class="confirmation-footer-brand">
+            <span class="brand-name">ÉLAIRE</span>
+            <span class="brand-desc"
+              >Пространство красоты и гармонии в самом сердце города. Дарим
+              моменты заботы о себе и подчеркиваем вашу уникальность.</span
+            >
+          </div>
+          <div class="confirmation-footer-links-row">
+            <div class="confirmation-links-col" style="width: 147px">
+              <span class="col-title">Услуги</span>
+              <a href="#">Стрижки &amp; Укладки</a>
+              <a href="#">Маникюр &amp; Педикюр</a>
+              <a href="#">Спа &amp; Массаж</a>
+            </div>
+            <div class="confirmation-links-col" style="width: 188px">
+              <span class="col-title">Контакты</span>
+              <a href="#">+7 (495) 123-45-67</a>
+              <a href="#">ул. Пречистенка, 12, Москва</a>
+              <a href="#">ежедневно: 10:00 - 22:00</a>
+            </div>
+          </div>
+        </div>
+        <div class="confirmation-footer-line"></div>
+        <div class="confirmation-footer-bottom">
+          <span class="copy"
+            >© 2026 ÉLAIRE Beauty &amp; Wellness. Все права защищены.</span
+          >
+          <span class="legal"
+            >Политика конфиденциальности • Публичная оферта</span
+          >
+        </div>
+      </footer>
+    </div>
+    <script src="./confirmation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+/* ==========================================================================
+   СТИЛИ СТРАНИЦЫ ВЫБОРА УСЛУГ
+
+   Общие стили (header, footer, step-indicator, page, header-row,
+   title-with-back, back-button, page-title) вынесены в common.css.
+   Они используются в компонентах Header, Footer, StepIndicator и на
+   всех страницах бронирования. Здесь оставлено только специфичное
+   для страницы услуг.
+   ========================================================================== */
+
+/* ===== layout страницы услуг ===== */
+.main-booking-flow {
+  display: flex;
+  flex-direction: row;
+  padding: 48px 56px 80px;
+  gap: 40px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+/* ===== sidebar ===== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 228px;
+}
+
+.categories-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  line-height: 34px;
+  color: #222222;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+  height: 52px;
+  background: #ffffff;
+  border: 1px solid #ede8e1;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  background: #f0f4ef;
+  border-width: 2px;
+}
+
+.category-item.active {
+  background: #4f5d50;
+  border: none;
+}
+
+.category-item .cat-name {
+  font-size: 15px;
+  line-height: 20px;
+  color: #222222;
+}
+
+.category-item.active .cat-name {
+  color: #ffffff;
+}
+
+.count-badge {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 2px 8px;
+  height: 20px;
+  background: #f0f4ef;
+  border-radius: 100px;
+}
+
+.category-item.active .count-badge {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.count-badge span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #4f5d50;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.category-item.active .count-badge span {
+  color: #ffffff;
+}
+
+/* ===== services list ===== */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 16px;
+  min-width: 800px;
+}
+
+.rows-loading {
+  min-height: 400px;
+}
+
+.service-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #ede8e1;
+  border-radius: 16px;
+}
+
+.service-row .info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 1;
+  min-width: 500px;
+}
+
+.service-row .info .title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #222222;
+  align-self: stretch;
+}
+
+.service-row .info .desc {
+  font-size: 13px;
+  line-height: 17px;
+  color: #6b6661;
+}
+
+.service-row .meta {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.service-row .meta .duration {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+  min-width: 70px;
+  flex-shrink: 0;
+}
+
+.service-row .meta .price {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #222222;
+  flex-shrink: 0;
+}
+
+.select-btn {
+  padding: 10px 24px;
+  background: #f0f4ef;
+  border-radius: 19px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  color: #4f5d50;
+}
+
+.select-btn:hover {
+  background: #e2e8e0;
+}

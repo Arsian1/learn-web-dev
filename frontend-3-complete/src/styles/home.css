@@ -1,0 +1,309 @@
+/* ==========================================================================
+   СТИЛИ ГЛАВНОЙ СТРАНИЦЫ
+
+   Общие стили (header, footer, page) вынесены в common.css.
+   Они используются в компонентах Header, Footer, StepIndicator и на
+   всех страницах бронирования. Здесь оставлены только секции
+   главной: hero, популярные услуги, мастера.
+   ========================================================================== */
+
+/* ===== hero ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 80px;
+  gap: 28px;
+  height: 620px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("../images/hero-salon.png") center / cover no-repeat;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.1;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-desc {
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.cta-service {
+  padding: 18px 36px;
+  background: #4f5d50;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.cta-service:hover {
+  background: #3d4a3e;
+}
+
+.cta-master {
+  padding: 18px 36px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.cta-master:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== section header ===== */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.section-tag {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #4f5d50;
+}
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  color: #222222;
+}
+
+/* ===== popular services ===== */
+.popular-services {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 100px 80px 80px;
+  gap: 48px;
+  background: #faf6f0;
+}
+
+.services-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+  padding-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #ede8e1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.service-card-image {
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.service-card-image--haircut {
+  background-image: url("../images/service-haircut.png");
+}
+
+.service-card-image--manicure {
+  background-image: url("../images/service-manicure.png");
+}
+
+.service-card-image--spa {
+  background-image: url("../images/service-spa.png");
+}
+
+.service-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.service-card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #222222;
+}
+
+.service-card-meta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-card-meta .price {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #c1a27e;
+}
+
+.service-card-meta .duration {
+  font-size: 13px;
+  line-height: 17px;
+  color: #6b6661;
+}
+
+/* ===== our masters ===== */
+.our-masters {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 80px 100px;
+  gap: 48px;
+  background: #faf6f0;
+}
+
+.masters-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+}
+
+.master-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+  padding-bottom: 24px;
+  background: #ffffff;
+  border: 1px solid #ede8e1;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.master-card-image {
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.master-card-image--ekaterina {
+  background-image: url("../images/master-ekaterina.png");
+}
+
+.master-card-image--alisa {
+  background-image: url("../images/master-alisa.png");
+}
+
+.master-card-image--daniil {
+  background-image: url("../images/master-daniil.png");
+}
+
+.master-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.master-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.master-name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #222222;
+}
+
+.master-role {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+}
+
+.stars {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  width: 14px;
+  height: 14px;
+  background: #c1a27e;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.star-empty {
+  background: #eadbc8;
+}
+
+.rating {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #222222;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Салон услуг — ÉLAIRE</title>
+    <link rel="stylesheet" href="booking.css" />
+  </head>
+  <body>
+    <div class="booking-page">
+      <!-- header -->
+      <header class="booking-header">
+        <div class="logo">
+          <span class="booking-logo-text">ÉLAIRE</span>
+        </div>
+        <nav class="booking-nav-links">
+          <div class="booking-nav-item active"><a href="#">Услуги</a></div>
+          <div class="booking-nav-item"><a href="#">Мастера</a></div>
+          <div class="booking-nav-item"><a href="#">Отзывы</a></div>
+          <div class="booking-nav-item"><a href="#">Контакты</a></div>
+        </nav>
+        <button class="booking-login-button"><span>Войти</span></button>
+      </header>
+
+      <!-- main -->
+      <main class="booking-layout">
+        <!-- header-row -->
+        <div class="booking-header-row">
+          <div class="booking-title-with-back">
+            <button class="booking-back-button">←</button>
+            <span class="booking-page-title">Выбор даты и времени</span>
+          </div>
+          <div class="booking-step-indicator">
+            <div class="booking-step done">
+              <div class="booking-circle"><span>✓</span></div>
+              <span class="booking-step-label light">Выбор услуги</span>
+              <div class="booking-step-line"></div>
+            </div>
+            <div class="booking-step">
+              <div class="booking-circle"><span>2</span></div>
+              <span class="booking-step-label">Дата и время</span>
+              <div class="booking-step-line"></div>
+            </div>
+            <div class="booking-step">
+              <div class="booking-circle empty"><span>3</span></div>
+              <span class="booking-step-label light">Подтверждение</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- panels: calendar -->
+        <div class="panels">
+          <!-- calendar-box -->
+          <div class="calendar-box">
+            <div class="calendar-header">
+              <span class="month-year"></span>
+              <div class="calendar-nav">
+                <button class="calendar-nav-prev">‹</button>
+                <button class="calendar-nav-next">›</button>
+              </div>
+            </div>
+            <div class="days-grid-container">
+              <div class="days-labels">
+                <span>Пн</span><span>Вт</span><span>Ср</span> <span>Чт</span
+                ><span>Пт</span><span>Сб</span><span>Вс</span>
+              </div>
+              <div class="grid-days"></div>
+            </div>
+          </div>
+
+          <!-- time-box -->
+          <div class="time-box">
+            <span class="time-title">Доступное время</span>
+            <div class="time-grid"></div>
+          </div>
+        </div>
+
+        <!-- bottom-bar -->
+        <div class="bottom-bar">
+          <div class="selected-info">
+            <span class="label">Выбранная дата и время:</span>
+            <span class="value"></span>
+          </div>
+          <button class="booking-next-btn">Далее</button>
+        </div>
+      </main>
+
+      <!-- footer -->
+      <footer class="booking-footer">
+        <div class="booking-footer-top">
+          <div class="booking-footer-brand">
+            <span class="brand-name">ÉLAIRE</span>
+            <span class="brand-desc"
+              >Пространство красоты и гармонии в самом сердце города. Дарим
+              моменты заботы о себе и подчеркиваем вашу уникальность.</span
+            >
+          </div>
+          <div class="booking-footer-links-row">
+            <div class="booking-links-col" style="width: 147px">
+              <span class="col-title">Услуги</span>
+              <a href="#">Стрижки &amp; Укладки</a>
+              <a href="#">Маникюр &amp; Педикюр</a>
+              <a href="#">Спа &amp; Массаж</a>
+            </div>
+            <div class="booking-links-col" style="width: 188px">
+              <span class="col-title">Контакты</span>
+              <a href="#">+7 (495) 123-45-67</a>
+              <a href="#">ул. Пречистенка, 12, Москва</a>
+              <a href="#">ежедневно: 10:00 - 22:00</a>
+            </div>
+          </div>
+        </div>
+        <div class="booking-footer-line"></div>
+        <div class="booking-footer-bottom">
+          <span class="copy"
+            >© 2026 ÉLAIRE Beauty &amp; Wellness. Все права защищены.</span
+          >
+          <span class="legal"
+            >Политика конфиденциальности • Публичная оферта</span
+          >
+        </div>
+      </footer>
+    </div>
+    <script src="./booking.js"></script>
+  </body>
+</html>

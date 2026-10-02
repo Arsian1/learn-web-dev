@@ -1,0 +1,208 @@
+/* ==========================================================================
+   СТИЛИ СТРАНИЦЫ ПОДТВЕРЖДЕНИЯ ЗАПИСИ
+
+   Общие стили (header, footer, step-indicator, page, header-row,
+   title-with-back, back-button, page-title) вынесены в common.css.
+   Они используются в компонентах Header, Footer, StepIndicator и на
+   всех страницах бронирования. Здесь оставлено только специфичное
+   для страницы подтверждения.
+   ========================================================================== */
+
+/* ===== layout страницы подтверждения ===== */
+.confirmation-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 56px 80px;
+  gap: 40px;
+  max-width: 1024px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ===== centered card ===== */
+.centered-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px 28px;
+  gap: 32px;
+  width: 520px;
+  background: #ffffff;
+  border: 1px solid #eadbc8;
+  border-radius: 20px;
+  align-self: center;
+}
+
+/* ===== booking info ===== */
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 100%;
+}
+
+.booking-info .section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  width: 100%;
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 100%;
+}
+
+.detail-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+}
+
+.detail-row .label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6b6661;
+}
+
+.detail-row .value {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+}
+
+.detail-divider {
+  border: none;
+  border-top: 1px solid #ede8e1;
+  width: 100%;
+  margin: 0;
+}
+
+.total-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  width: 100%;
+}
+
+.total-row .label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #222222;
+}
+
+.total-row .price {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #c1a27e;
+}
+
+/* ===== contact form ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 20px;
+  width: 100%;
+}
+
+.contact-form .form-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #222222;
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 17px;
+  color: #6b6661;
+}
+
+.input-group input,
+.input-group textarea {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 16px;
+  width: 100%;
+  border: 1px solid #eadbc8;
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #222222;
+  background: #ffffff;
+}
+
+.input-group input {
+  height: 44px;
+}
+
+.input-group textarea {
+  padding: 16px;
+  height: 80px;
+  resize: vertical;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #6b6661;
+  opacity: 0.6;
+}
+
+.confirmation-next-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 36px;
+  width: 100%;
+  height: 52px;
+  background: #4f5d50;
+  border-radius: 100px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.confirmation-next-btn:hover {
+  background: #3d4a3e;
+}
