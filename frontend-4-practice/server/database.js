@@ -1,65 +1,19 @@
-// «База данных» — пока обычный JS-объект.
-//
-// Содержит только то, что нужно странице календаря:
-//   - today — «сегодня» по мнению сервера;
-//   - slotsEvenDay / slotsOddDay — два набора слотов,
-//     чтобы на клиенте было видно: при смене дня данные разные.
-//
-// Когда появится настоящий backend — этот файл исчезнет,
-// но структура данных сохранится.
-//
-// Правьте данные под свой проект. Ничего страшного, если
-// названия полей не совпадают с примером — сервер отдаст
-// то, что вы здесь напишете. Но клиент должен знать формат.
-export const database = {
-    // «Сегодня» по мнению сервера.
-    // Календарь использует это, чтобы:
-    //   - понять, какой месяц показать при открытии;
-    //   - запретить выбор дней раньше этой даты;
-    //   - подсветить сегодняшний день.
-    //
-    // Формат: { day, month, year }. Месяц — 0-индексный (9 = октябрь).
-    // Меняйте на свой — например, поставьте реальную дату
-    // через new Date() или любую удобную для проверки.
-    today: { day: 17, month: 9, year: 2026 },
-  
-    // Слоты для чётных дней (2, 4, 6, ...).
-    // Каждый слот: { time: "10:00", available: true }.
-    //   time      — время в формате "HH:MM";
-    //   available — true, если слот свободен.
-    //
-    // Сервер сам решает, какой набор отдать — чётный или нечётный.
-    // Клиент этой логики не видит.
-    slotsEvenDay: [
-      { time: "10:00", available: true },
-      { time: "10:30", available: true },
-      { time: "11:00", available: true },
-      { time: "11:30", available: true },
-      { time: "12:00", available: false },
-      { time: "13:00", available: false },
-      { time: "14:30", available: true },
-      { time: "15:00", available: true },
-      { time: "16:00", available: true },
-      { time: "17:30", available: true },
-      { time: "18:00", available: true },
-      { time: "19:30", available: true },
-    ],
-  
-    // Слоты для нечётных дней (1, 3, 5, ...).
-    // Здесь занятые слоты другие — чтобы при клике по дням
-    // пользователь видел, что данные действительно меняются.
-    slotsOddDay: [
-      { time: "10:00", available: true },
-      { time: "10:30", available: true },
-      { time: "11:00", available: false },
-      { time: "11:30", available: true },
-      { time: "12:00", available: true },
-      { time: "13:00", available: true },
-      { time: "14:30", available: true },
-      { time: "15:00", available: true },
-      { time: "16:00", available: false },
-      { time: "17:30", available: true },
-      { time: "18:00", available: true },
-      { time: "19:30", available: true },
-    ],
-  };
+// server/database.js — «база данных» имитационного сервера.
+// Месяц везде 0-индексный (0 = январь, 9 = октябрь).
+
+// «Сегодня» отдаёт сервер, а не браузер.
+export const today = { day: 20, month: 9, year: 2026 };
+
+const TIMES = ['10:00', '11:00', '12:00', '13:00', '14:00', '15:30', '16:00', '17:00'];
+
+// Слот — это { time, available }.
+const build = (pattern) =>
+  TIMES.map((time, index) => ({ time, available: pattern[index] === '1' }));
+
+// Два набора слотов: сервер выбирает один из них по чётности дня.
+export const slotsSets = [build('10101111'), build('01110101')];
+
+export function getSlots({ day, month, year }) {
+  const dayNumber = Math.floor(Date.UTC(year, month, day) / 86400000);
+  return slotsSets[dayNumber % slotsSets.length];
+}
